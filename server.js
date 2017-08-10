@@ -56,16 +56,7 @@ app.get('/:articleName' , function(req,res)  {
     res.send(createtemplate(series[articlesName]));
     
 });
-app.get('/second', function(req,res){
-    res.send(createtemplate(second));
-  
-    
-});
-app.get('/third', function(req,res){
-    res.send(createtemplate(third));
-    
-    
-});
+
 
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
