@@ -20,11 +20,11 @@ body {
     height: 200px;
 }
 
- h1{color:blue;}
+ h1{color:blue;font-family:italic;}
          .container
          {
             margin: 0 auto;
-          font-family:Ariel pink;
+          font-family:italic;
          color:red;
          margin-top:50px;
          margin-left:30px; 
