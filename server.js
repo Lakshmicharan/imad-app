@@ -7,7 +7,7 @@ app.use(morgan('combined'));
 var series=
 {
 
- first = {
+ first : {
     title: 'first',
     heading: 'first file',
     date :'aug 10 2017',
@@ -20,7 +20,7 @@ var series=
         
      </div>`
 },
- second={
+ second:{
       title: 'second',
     heading: 'second file',
     date :'aug 10 2017',
@@ -33,7 +33,7 @@ var series=
         
      </div>`
  },
- third={
+ third:{
       title: 'third',
     heading: 'third file',
     date :'aug 10 2017',
