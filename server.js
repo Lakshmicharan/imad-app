@@ -57,12 +57,12 @@ app.get('/first', function(req,res){
     
 });
 app.get('/second', function(req,res){
-    res.send(createtemplate(first));
+    res.send(createtemplate(second));
   
     
 });
 app.get('/third', function(req,res){
-    res.send(createtemplate(first));
+    res.send(createtemplate(third));
     
     
 });
