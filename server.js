@@ -15,11 +15,11 @@ app.get('/first', function(req,res){
     
 });
 app.get('/second', function(req,res){
-    res.send('this is the second code');
+  res.sendFile(path.join(__dirname, 'ui', 'second.html')); 
     
 });
 app.get('/third', function(req,res){
-    res.send('this is the third code');
+    res.sendFile(path.join(__dirname, 'ui', 'first.html'));
     
 });
 
