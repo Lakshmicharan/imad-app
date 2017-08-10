@@ -4,8 +4,10 @@ var path = require('path');
 
 var app = express();
 app.use(morgan('combined'));
+var series=
+{
 
-var first = {
+ first = {
     title: 'first',
     heading: 'first file',
     date :'aug 10 2017',
@@ -17,6 +19,33 @@ var first = {
        <h1> This is my first web page </h1>
         
      </div>`
+},
+ second={
+      title: 'second',
+    heading: 'second file',
+    date :'aug 10 2017',
+    content: 
+          `<div> aug 10 2017</div>
+     <div>
+        <p> This is my second web page  This is my second web page  This is my second web page </p>
+        <p> This is my second web page  This is my second web page  This is my second web page </p> 
+       <h1> This is my second web page </h1>
+        
+     </div>`
+ },
+ third={
+      title: 'third',
+    heading: 'third file',
+    date :'aug 10 2017',
+    content: 
+          `<div> aug 10 2017</div>
+     <div>
+        <p> This is my third web page  This is my third web page  This is my third web page </p>
+        <p> This is my third web page  This is my third web page  This is my third web page </p> 
+       <h1> This is my third web page </h1>
+        
+     </div>`
+ }
 };
 
 app.get('/', function (req, res) {
@@ -29,11 +58,13 @@ app.get('/first', function(req,res){
     
 });
 app.get('/second', function(req,res){
-  res.sendFile(path.join(__dirname, 'ui', 'second.html')); 
+    res.send(createtemplate(first));
+  
     
 });
 app.get('/third', function(req,res){
-    res.sendFile(path.join(__dirname, 'ui', 'third.html'));
+    res.send(createtemplate(first));
+    
     
 });
 
