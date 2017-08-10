@@ -1,3 +1,3 @@
 console.log('Loaded!');
-var element=getElementById('fdiv');
+var element=document.getElementById('fdiv');
 element.innerHTML='SreeCharan';
