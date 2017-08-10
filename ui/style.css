@@ -20,3 +20,14 @@ body {
     height: 200px;
 }
 
+ h1{color:blue;}
+         .container
+         {
+            margin: 0 auto;
+          font-family:italic;
+         color:red;
+         margin-top:50px;
+         margin-left:30px; 
+         padding-left:30px;
+          padding-right:50px;    }
+           
