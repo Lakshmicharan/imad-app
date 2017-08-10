@@ -9,8 +9,17 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
+
 app.get('/first', function(req,res){
     res.send('this is the first code');
+    
+});
+app.get('/second', function(req,res){
+    res.send('this is the second code');
+    
+});
+app.get('/third', function(req,res){
+    res.send('this is the third code');
     
 });
 
