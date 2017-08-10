@@ -51,9 +51,9 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-
-app.get('/first', function(req,res){
-    res.send(createtemplate(first));
+app.get('/:articleName' , function(req,res)  {
+    var articleNme=req.params.articleName;
+    res.send(createtemplate(series[articlesName]));
     
 });
 app.get('/second', function(req,res){
