@@ -4,8 +4,7 @@ var path = require('path');
 
 var app = express();
 app.use(morgan('combined'));
-var series=
-{
+var series={
 
  first : {
     title: 'first',
