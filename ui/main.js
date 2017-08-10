@@ -13,11 +13,13 @@ img.onclick = function()
 {
     var interval=setInterval(moveRight,50);
 }
+var button=document.getElementById("counter")
 button.onclick = function()
 {
     var request= new XMLHttpRequest();
     req.onreadystatechange= function(){
-        if(request.readyState === XMLHttpRequest.DONE){
+        if(request.readyState === XMLHttpRequest.DONE)
+        {
             if(request.status === 200)
             {
               var  counter=request.responseText;
