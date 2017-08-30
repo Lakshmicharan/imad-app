@@ -80,7 +80,7 @@ var counter=0;
     res.send(counter.toString())});
 
 
-app.get('/articles/:articleName' , function( req , res) 
+app.get('/series/:articleName' , function( req , res) 
  {
     
    
