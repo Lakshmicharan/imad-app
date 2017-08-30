@@ -80,9 +80,11 @@ var counter=0;
     res.send(counter.toString())});
 
 
-app.get('/articles/:articleName' , function(req,res)  {
+app.get('/articles/:articleName' , function(req,res) 
+ {
+    
    
-    pool.query("SELECT * FROM article where title="+ req.params.articleName, function(err,result)
+    pool.query("SELECT * FROM article where title= "+ req.params.articleName, function(err,result)
     {
         if(err)
         {
@@ -103,9 +105,7 @@ app.get('/articles/:articleName' , function(req,res)  {
             
         }
     });
-    res.send(createtemplate(series[articleName]));
-    
-});
+  });
 
 app.get('/ui/main.js', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'main.js'));
