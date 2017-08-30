@@ -84,7 +84,7 @@ app.get('/series/:articleName' , function( req , res)
  {
     
    
-    pool.query("SELECT * FROM first WHERE title = '" +  req.params.articleName  +  " ' " ,  function(err,  result)
+    pool.query("SELECT * FROM arttable WHERE title = '" +  req.params.articleName  +  " ' " ,  function(err,  result)
     {
         if(err) 
         {
