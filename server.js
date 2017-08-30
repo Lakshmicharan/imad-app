@@ -80,13 +80,13 @@ var counter=0;
     res.send(counter.toString())});
 
 
-app.get('/articles/:articleName' , function(req,res) 
+app.get('/articles/:articleName' , function( req , res) 
  {
     
    
-    pool.query("SELECT * FROM first WHERE title = '" +  req.params.articleName +  " ' " ,  function(err,result)
+    pool.query("SELECT * FROM first WHERE title = '" +  req.params.articleName  +  " ' " ,  function(err,  result)
     {
-        if(err)
+        if(err) 
         {
             res.status(500).send(err.toString());
             
