@@ -84,7 +84,7 @@ app.get('/articles/:articleName' , function(req,res)
  {
     
    
-    pool.query("SELECT * FROM article where title=' "+ req.params.articleName+"'" ,  function(err,result)
+    pool.query("SELECT * FROM article WHERE title= '" +  req.params.articleName + "'" ,  function(err,result)
     {
         if(err)
         {
@@ -93,7 +93,7 @@ app.get('/articles/:articleName' , function(req,res)
         }else
         {
             
-            if(result.rows.length ===0 )
+            if(result.rows.length === 0 )
             {
                 res.status(404).send('Article Not Found');
                 
