@@ -85,7 +85,7 @@ var counter=0;
         return hashed.toString('hex');
         
     }
-app.get('/hash/input',function(req,res){
+app.get('/hash/:input',function(req,res){
     var hashedString= hash(req.params.input, 'this-is-same-random-string');
     res.send(hashedString);
     
